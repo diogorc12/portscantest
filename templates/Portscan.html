@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Port Scanner Equinix Vulnerabilidade</title>
+</head>
+<body>
+    <h2>Port Scanner Equinix Vulnerabilidade</h2>
+    <form action="/scan" method="post">
+        <label for="ip_range">IP Range:</label>
+        <input type="text" id="ip_range" name="ip_range"><br><br>
+        <label for="port_range">Port Range:</label>
+        <input type="text" id="port_range" name="port_range"><br><br>
+        <input type="submit" value="Scan Ports">
+    </form>
+    <div id="scan_results">
+        <!-- Results will be displayed here -->
+        <pre>{{ scan_results }}</pre>
+    </div>
+</body>
+</html>
