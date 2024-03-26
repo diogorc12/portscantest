@@ -8,13 +8,16 @@
     <form action="/scan" method="post">
         <label for="ip_range">IP Range:</label>
         <input type="text" id="ip_range" name="ip_range"><br><br>
-        <label for="port_range">Port Range:</label>
-        <input type="text" id="port_range" name="port_range"><br><br>
+        <!-- Remova o campo para inserir o range de portas -->
         <input type="submit" value="Scan Ports">
     </form>
     <div id="scan_results">
         <!-- Results will be displayed here -->
-        <pre>{{ scan_results }}</pre>
+        <ul>
+            {% for result in results %}
+                <li>{{ result }}</li>
+            {% endfor %}
+        </ul>
     </div>
 </body>
 </html>
