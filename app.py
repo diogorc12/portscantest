@@ -50,11 +50,6 @@ def index():
     return render_template('Portscan.html')
 
 
-@app.route('/test1')
-def index():
-    return render_template('Portscan.html')
-
-
 @app.route('/scan', methods=['POST'])
 def scan_ports():
     ip_range = request.form['ip_range']
